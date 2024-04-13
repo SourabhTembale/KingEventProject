@@ -19,6 +19,15 @@ app.use(cors({ origin: 'http://localhost:5173' }));
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+
+app.get("/",(req,res)=>{
+  res.json({
+    success:true,
+    message:"Habibi COme to Dubai!!",
+  });
+});
+
+
 app.use("/api/v1/message", router);
 
 
